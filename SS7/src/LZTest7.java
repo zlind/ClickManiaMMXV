@@ -23,6 +23,7 @@ public class LZTest7 {
                 nBad++;
             }
         }
+        System.out.println("The sentence has " + sWords.length + " words");
         System.out.println(nGood + " good words");
         System.out.println(nBad + " bad words");
     }
