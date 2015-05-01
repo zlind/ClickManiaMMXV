@@ -1,7 +1,7 @@
 //Zach Lindner
 
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 public class e1a {
 
@@ -17,7 +17,6 @@ public class e1a {
             ardAvg[i] /= ardAvg.length;
             System.out.println("Average of Student #" + (i + 1) + ": " + ardAvg[i] + "%");
         }
-
         sin.close();
     }
 }
