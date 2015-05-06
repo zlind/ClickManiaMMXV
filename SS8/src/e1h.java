@@ -16,6 +16,7 @@ public class e1h {
             nGCD = getGCD(nNum1, nNum2);
             System.out.println(nGCD);
         }
+        fin.close();
     }
 
     private static int getGCD(int nNum1, int nNum2) {

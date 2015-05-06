@@ -31,5 +31,6 @@ public class e1d {
                 }
             }
         }
+        fin.close();
     }
 }

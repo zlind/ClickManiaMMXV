@@ -24,5 +24,6 @@ public class e1c {
             }
         }
         System.out.println("Number of e's: " + nFreq);
+        fin.close();
     }
 }

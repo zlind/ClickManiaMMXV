@@ -25,6 +25,7 @@ public class e1g {
                 dCost[i] = nCheq[i] * 0.15;
                 System.out.print(" $" + dCost[i] + "\n");
             }
+            fin.close();
         }
     }
 }

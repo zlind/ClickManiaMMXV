@@ -31,6 +31,7 @@ public class e1f {
             if (nMath[i] >= 50 || nEng[i] >= 50) {
                 System.out.println("- passed either math or english");
             }
+            fin.close();
         }
     }
 }
