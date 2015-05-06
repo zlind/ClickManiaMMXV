@@ -9,7 +9,7 @@ public class e1b {
         String sFirst, sLast;
         Scanner fin = new Scanner(new FileReader("e1bIN.txt"));
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 6; i++) {
             sFirst = fin.next();
             sLast = fin.next();
             System.out.print(Character.toUpperCase(sFirst.charAt(0)) 
