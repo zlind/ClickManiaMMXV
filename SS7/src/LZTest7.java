@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LZTest7 {
 
     public static void main(String[] args) {
-        String sInput, sWords[];
+        String sInput, arsWords[];
         boolean bGood;
         int nGood = 0, nBad = 0;
         Scanner sin = new Scanner(System.in);
@@ -13,29 +13,29 @@ public class LZTest7 {
         System.out.println("Gimme a sentence");
         sInput = sin.nextLine();
 
-        sWords = sInput.split(" ");
+        arsWords = sInput.split(" ");
         //iterates through each word in the sentence
-        for (int i = 0; i < sWords.length; i++) {
-            bGood = isGood(sWords, i);
+        for (int i = 0; i < arsWords.length; i++) {
+            bGood = isGood(arsWords, i);
             if (bGood) {
                 nGood++;
             } else {
                 nBad++;
             }
         }
-        System.out.println("The sentence has " + sWords.length + " words");
+        System.out.println("The sentence has " + arsWords.length + " words");
         System.out.println(nGood + " good words");
         System.out.println(nBad + " bad words");
     }
 
     public static boolean isGood(String[] sWords, int i) {
-        Character ch, chVowel[] = {'a', 'e', 'i', 'o', 'u'};
+        Character ch, archVowel[] = {'a', 'e', 'i', 'o', 'u'};
         //iterates through each letter in sWords
         for (int j = 0; j < sWords[i].length(); j++) {
             ch = sWords[i].charAt(j);
             //checks if ch is a vowel
-            for (int k = 0; k < chVowel.length; k++) {
-                if (ch == chVowel[k]) {
+            for (int k = 0; k < archVowel.length; k++) {
+                if (ch == archVowel[k]) {
                     return true;
                 }
             }
