@@ -14,6 +14,7 @@ public class e2c {
             x[i] = fin.nextInt();
             y[i] = fin.nextInt();
         }
+        
         dSlope1 = (y[1] - y[0]) / (x[1] - x[0]);
         dSlope2 = (y[3] - y[2]) / (x[3] - x[2]);
 

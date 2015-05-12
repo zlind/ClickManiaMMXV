@@ -1,6 +1,6 @@
 //Zach Lindner
 
-import java.io.*;
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class e1d {
@@ -9,8 +9,7 @@ public class e1d {
         String sFirst[] = new String[4], sLast[] = new String[4];
         double dWage[] = new double[4], dTime, dRate;
         int nChoice;
-        Scanner sin = new Scanner(System.in);
-        Scanner fin = new Scanner(new FileReader("e1dIN.txt"));
+        Scanner fin = new Scanner(new FileReader("e1dIN.txt")), sin = new Scanner(System.in);
 
         for (int i = 0; i < 4; i++) {
             sFirst[i] = fin.next();
