@@ -19,11 +19,11 @@ public class e2f {
         if (arnTime[0] < 1200) {
             sHour = Character.toString(sTime.charAt(0));
             sMin = Character.toString(sTime.charAt(1)) + Character.toString(sTime.charAt(2));
-            System.out.println(arnTime[0] + "\n" + sHour + " hours and " + sMin + " minutes\n");
+            System.out.println(arnMil[0] + "\n" + arnMil[1] + "\n" + sHour + " hours and " + sMin + " minutes\n");
         } else {
             sHour = Character.toString(sTime.charAt(0)) + Character.toString(sTime.charAt(1));
             sMin = Character.toString(sTime.charAt(2)) + Character.toString(sTime.charAt(3));
-            System.out.println(arnTime[0] + "\n" + sHour + " hours and " + sMin + " minutes\n");
+            System.out.println(arnMil[0] + "\n" + arnMil[1] + "\n" + sHour + " hours and " + sMin + " minutes\n");
         }
 
         arnTime[1] = Math.abs(arnMil[2] - arnMil[1]);
@@ -31,11 +31,11 @@ public class e2f {
         if (arnTime[1] < 1200) {
             sHour = Character.toString(sTime.charAt(0));
             sMin = Character.toString(sTime.charAt(1)) + Character.toString(sTime.charAt(2));
-            System.out.println(arnTime[1] + "\n" + sHour + " hours and " + sMin + " minutes");
+            System.out.println(arnMil[1] + "\n" + arnMil[2] + "\n" + sHour + " hours and " + sMin + " minutes");
         } else {
             sHour = Character.toString(sTime.charAt(0)) + Character.toString(sTime.charAt(1));
             sMin = Character.toString(sTime.charAt(1)) + Character.toString(sTime.charAt(2));
-            System.out.println(arnTime[1] + "\n" + sHour + " hours and " + sMin + " minutes");
+            System.out.println(arnMil[1] + "\n" + arnMil[2] + "\n" + sHour + " hours and " + sMin + " minutes");
         }
         fin.close();
     }
