@@ -1,6 +1,6 @@
 //Zach Lindner
 
-import java.awt.*;
+import java.awt.Color;
 import java.awt.event.*;
 import java.util.Random;
 import javax.swing.*;
@@ -22,7 +22,6 @@ public class ButtonRandomColour {
     }
 
     public void GUI() {
-
         //Frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(panel);
@@ -49,7 +48,9 @@ public class ButtonRandomColour {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Random r = new Random();
-                panel.setBackground(new Color(r.nextInt(0xFFFFFF)));
+                Color c = new Color(r.nextInt(0xFFFFFF));
+                panel.setBackground(c);
+                System.out.println(c.getRed() + " " + c.getGreen() + " " + c.getBlue());
             }
         });
     }

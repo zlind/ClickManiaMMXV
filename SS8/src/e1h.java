@@ -1,6 +1,6 @@
 //Zach Lindner
 
-import java.io.*;
+import java.io.FileReader;
 import java.math.BigInteger;
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class e1h {
         fin.close();
     }
 
-    private static int getGCD(int nNum1, int nNum2) {
+    public static int getGCD(int nNum1, int nNum2) {
         BigInteger bNum1 = BigInteger.valueOf(nNum1);
         BigInteger bNum2 = BigInteger.valueOf(nNum2);
         BigInteger bGCD = bNum1.gcd(bNum2);
