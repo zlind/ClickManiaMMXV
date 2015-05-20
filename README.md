@@ -2,8 +2,10 @@
 
 Created By: 
 
-TrapHouseDunkeh
+Dunkeh (Ariana)
 
-Chuckboi (ft. Lava Girl)
+Chuckboi (Chuckie)
 
-Sig Hiel (Young Hitler)
+ (Zach)
+
+ (Aidan)
