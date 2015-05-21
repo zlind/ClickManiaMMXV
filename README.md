@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ClickManiaMMXV
 
 Created By: 
@@ -9,3 +10,6 @@ Chuckboi (Chuckie)
  (Zach)
 
 BikerAidan (Aidan)
+=======
+# ICS-3UI
+>>>>>>> branch 'master' of https://github.com/zlindner/ICS-3UI.git
