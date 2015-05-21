@@ -7,25 +7,23 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class PanClick extends JPanel {
-    
-    ActionListener clicked = new Clicked();
+
+    ActionListener click = new Click();
     JButton btnClick = new JButton("Click");
+    public static int cash;
 
     public PanClick() {
         setLayout(new GridLayout(1, 1));
-        
+
         add(btnClick);
-        btnClick.setSize(125, 75);
-        //btnClick.addActionListener(clicked);
+        btnClick.addActionListener(click);
     }
-   class Clicked implements ActionListener {
+
+    class Click implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent event) {
-            clicks++;
-            cash++;
-            lblCount.setText("Clicks: " + clicks);
-            lblCash.setText("$" + cash);
+            PanHud.lblCash.setText("$" + cash++);
         }
     }
 }
