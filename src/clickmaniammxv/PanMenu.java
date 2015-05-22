@@ -30,7 +30,6 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
-            PanMain.panHud.setVisible(false);
         }
     }
 
@@ -39,7 +38,6 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
-            PanMain.panHud.setVisible(false);
         }
     }
 
@@ -48,7 +46,6 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
-            PanMain.panHud.setVisible(false);
         }
     }
 
@@ -57,7 +54,6 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(true);
-            PanMain.panHud.setVisible(true);
         }
     }
 }

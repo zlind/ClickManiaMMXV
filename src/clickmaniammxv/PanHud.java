@@ -10,10 +10,11 @@ public class PanHud extends JPanel {
 
     public PanHud() {
         setLayout(new GridLayout(1, 2));
-
-        lblCash.setHorizontalAlignment(JLabel.LEFT);
-        lblPerSecond.setHorizontalAlignment(JLabel.RIGHT);
+    
         add(lblCash);
         add(lblPerSecond);
+        
+        lblCash.setHorizontalAlignment(JLabel.LEFT);
+        lblPerSecond.setHorizontalAlignment(JLabel.RIGHT);
     }
 }
