@@ -7,6 +7,7 @@ public class FraMain extends JFrame {
     public static PanMain panMain = new PanMain();
 
     public FraMain() {
+        //nein
         add(panMain);
         setTitle("Click Mania MMXV");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
