@@ -9,8 +9,8 @@ import javax.swing.JPanel;
 
 public class PanMenu extends JPanel {
 
-    JButton btnUpgrades = new JButton("Upgrades"), btnOptions = new JButton("Options"), btnStats = new JButton("Stats"), btnBack = new JButton("Back");
-    ActionListener upgrades = new Upgrades(), options = new Options(), stats = new Stats(), back = new Back();
+    JButton btnUpgrades = new JButton("Upgrades"), btnOptions = new JButton("Options"), btnStats = new JButton("Stats"), btnBack = new JButton("Back"), btnSound = new JButton("Sound");
+    ActionListener upgrades = new Upgrades(), options = new Options(), stats = new Stats(), back = new Back(), Exit = new Sound();
 
     public PanMenu() {
         setLayout(new GridLayout(1, 4));
@@ -53,6 +53,12 @@ public class PanMenu extends JPanel {
 
     class Back implements ActionListener {
 
+        @Override
+        public void actionPerformed(ActionEvent event) {
+            PanMain.panClick.setVisible(true);
+        }
+    }
+    class Sound implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(true);
