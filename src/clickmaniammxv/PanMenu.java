@@ -1,5 +1,6 @@
 package clickmaniammxv;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -46,6 +47,7 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
+            FraMain.panMain.add(PanMain.panStats, BorderLayout.CENTER);
         }
     }
 
