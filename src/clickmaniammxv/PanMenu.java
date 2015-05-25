@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class PanMenu extends JPanel {
 
-    JButton btnUpgrades = new JButton("Upgrades"), btnOptions = new JButton("Options"), btnStats = new JButton("Stats"), btnBack = new JButton("Back");
+    JButton btnUpgrades = new JButton("Upgrades"), btnOptions = new JButton("Options"), btnStats = new JButton("Stats"), btnBack = new JButton("Back"),btnSoundOn = new JButton ("On"),btnSoundOff = new JButton ("Off");
     ActionListener upgrades = new Upgrades(), options = new Options(), stats = new Stats(), back = new Back();
 
     public PanMenu() {
@@ -24,6 +24,7 @@ public class PanMenu extends JPanel {
         btnOptions.addActionListener(options);
         btnStats.addActionListener(stats);
         btnBack.addActionListener(back);
+        
     }
 
     class Upgrades implements ActionListener {
