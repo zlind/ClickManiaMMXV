@@ -3,10 +3,10 @@
 
 Created By: 
 
-Dunkeh (Ariana)
+dÜnkey (Ariana)
 
 Chuckboi (Chuckie)
 
- (Zach)
+Hanzel (Zach)
 
 BikerAidan (Aidan)
