@@ -6,10 +6,13 @@ import javax.swing.JPanel;
 
 public class PanHud extends JPanel {
 
-    public static JLabel lblCash = new JLabel("$0"), lblPerSecond = new JLabel("$0 / second");
+    public static JLabel lblCash, lblPerSecond;
 
     public PanHud() {
         setLayout(new GridLayout(1, 2));
+        
+        lblCash = new JLabel("$0"); 
+        lblPerSecond = new JLabel("$0 / second");
     
         add(lblCash);
         add(lblPerSecond);

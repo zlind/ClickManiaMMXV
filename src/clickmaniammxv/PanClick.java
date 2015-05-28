@@ -9,11 +9,13 @@ import javax.swing.JPanel;
 public class PanClick extends JPanel {
 
     ActionListener click = new Click();
-    JButton btnClick = new JButton("Click");
+    JButton btnClick;
     public static int cash, clicks, totalcash, upgrade;
 
     public PanClick() {
         setLayout(new GridLayout(1, 1));
+
+        btnClick = new JButton("Click");
 
         add(btnClick);
         btnClick.addActionListener(click);
@@ -24,13 +26,13 @@ public class PanClick extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             cash++; //add 1 to cash
-            cash+=upgrade; //add x from upgrades
-            
+            cash += upgrade; //add x from upgrades
+
             totalcash++; //add 1 to total cash
-            totalcash+=upgrade; //add x from upgrades
-            
+            totalcash += upgrade; //add x from upgrades
+
             clicks++; //add 1 to total clicks
-            
+
             PanHud.lblCash.setText("$" + cash); //update cash
             PanStats.lblClicks.setText("Clicks: " + clicks); //update total # of clicks
             PanStats.lblCash.setText("Total Cash Earned: $" + totalcash); //update total cash earned

@@ -8,12 +8,14 @@ import javax.swing.JPanel;
 
 public class PanUpgrades extends JPanel {
 
-    public static JButton btnUpgrade1 = new JButton("+$1 / Click ~ Cost: $100");
+    public static JButton btnUpgrade1;
     public static int cost1 = 100, amtUpgrade1 = 0;
     ActionListener upgrade1 = new Upgrade1();
 
     public PanUpgrades() {
         setLayout(new GridLayout(1, 1));
+        
+        btnUpgrade1 = new JButton("+$1 / Click ~ Cost: $100");
 
         add(btnUpgrade1);
         btnUpgrade1.addActionListener(upgrade1);
@@ -25,7 +27,7 @@ public class PanUpgrades extends JPanel {
         public void actionPerformed(ActionEvent event) {
             if (PanClick.cash >= cost1) {
                 PanClick.cash -= cost1; //deduct cost from cash
-                cost1 += 20; //increase cost by $20
+                cost1 += 20; //increase cost by $20 each purchase
                 PanUpgrades.btnUpgrade1.setText("+$1 / Click ~ Cost: $" + cost1);
                 amtUpgrade1++; //add 1 to total amount of upgrade 1
                 PanClick.upgrade++; //add $1 per click
