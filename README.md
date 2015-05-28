@@ -3,7 +3,7 @@
 
 Created By: 
 
-Dünkeh (Ariana)
+dÜnkey (Ariana)
 Rep: 0
 
 Chuckboi (Chuckie)
