@@ -27,7 +27,7 @@ public class PanUpgrades extends JPanel {
         public void actionPerformed(ActionEvent event) {
             if (PanClick.cash >= cost1) {
                 PanClick.cash -= cost1; //deduct cost from cash
-                cost1 += 20; //increase cost by $20 each purchase
+                cost1 *= 1.5; //increase cost by $20 each purchase
                 PanUpgrades.btnUpgrade1.setText("+$1 / Click ~ Cost: $" + cost1);
                 amtUpgrade1++; //add 1 to total amount of upgrade 1
                 PanClick.upgrade++; //add $1 per click
