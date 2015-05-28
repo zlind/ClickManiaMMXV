@@ -31,6 +31,9 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
+            PanMain.panStats.setVisible(false);
+            PanMain.panUpgrades.setVisible(true);
+            FraMain.panMain.add(PanMain.panUpgrades, BorderLayout.CENTER);
         }
     }
 
@@ -58,6 +61,7 @@ public class PanMenu extends JPanel {
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(true);
             PanMain.panStats.setVisible(false);
+            PanMain.panUpgrades.setVisible(false);
         }
     }
 }

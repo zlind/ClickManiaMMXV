@@ -9,6 +9,7 @@ public class PanMain extends JPanel {
     public static PanClick panClick = new PanClick();
     public static PanHud panHud = new PanHud();
     public static PanStats panStats = new PanStats();
+    public static PanUpgrades panUpgrades = new PanUpgrades();
 
     public PanMain() {
         setLayout(new BorderLayout());
