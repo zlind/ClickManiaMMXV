@@ -23,8 +23,12 @@ public class PanClick extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent event) {
-            PanHud.lblCash.setText("$" + cash++);
-            PanStats.lblClicks.setText("Clicks: " + clicks++);
+            cash++;
+            cash += PanUpgrade.Upgrade1;
+            PanHud.lblCash.setText("$" + cash);
+            clicks++;
+            PanStats.lblClicks.setText("Clicks: " + clicks);
+
         }
     }
 }
