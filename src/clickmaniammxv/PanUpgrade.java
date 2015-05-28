@@ -30,6 +30,7 @@ public class PanUpgrade extends JPanel {
                 Upgrade1++;
                 Cost1 *= 1.5;
                 PanHud.lblCash.setText("$" + PanClick.cash);
+                PanHud.lblPerClick.setText("$" + (Upgrade1 + 1) + " / click");
                 btnUpgrade1.setText("+1/Click - $" + Cost1 );
    
             } else {
