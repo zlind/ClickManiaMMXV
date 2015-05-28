@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class PanMenu extends JPanel {
 
-    JButton btnUpgrades = new JButton("Upgrades"), btnOptions = new JButton("Options"), btnStats = new JButton("Stats"), btnBack = new JButton("Back"),btnSoundOn = new JButton ("On"),btnSoundOff = new JButton ("Off");
+    JButton btnUpgrades = new JButton("Upgrades"), btnOptions = new JButton("Options"), btnStats = new JButton("Stats"), btnBack = new JButton("Back");
     ActionListener upgrades = new Upgrades(), options = new Options(), stats = new Stats(), back = new Back();
 
     public PanMenu() {
@@ -20,11 +20,13 @@ public class PanMenu extends JPanel {
         add(btnStats);
         add(btnBack);
 
+
         btnUpgrades.addActionListener(upgrades);
         btnOptions.addActionListener(options);
         btnStats.addActionListener(stats);
         btnBack.addActionListener(back);
-        
+       
+
     }
 
     class Upgrades implements ActionListener {
@@ -40,6 +42,8 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
+              PanMain.panOption.setVisible(true);
+            FraMain.panMain.add(PanMain.panOption, BorderLayout.CENTER);
         }
     }
 
@@ -48,6 +52,7 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
+            PanMain.panStats.setVisible(true);
             FraMain.panMain.add(PanMain.panStats, BorderLayout.CENTER);
         }
     }
