@@ -11,6 +11,9 @@ public class PanHud extends JPanel {
 
     public PanHud() {
         setLayout(new GridLayout(1, 2));
+        
+        lblCash = new JLabel("$0"); 
+        lblPerSecond = new JLabel("$0 / second");
     
         add(lblCash);
         add(lblPerSecond);

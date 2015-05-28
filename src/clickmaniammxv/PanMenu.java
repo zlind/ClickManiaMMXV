@@ -9,11 +9,16 @@ import javax.swing.JPanel;
 
 public class PanMenu extends JPanel {
 
-    JButton btnUpgrades = new JButton("Upgrades"), btnOptions = new JButton("Options"), btnStats = new JButton("Stats"), btnBack = new JButton("Back");
+    JButton btnUpgrades, btnOptions, btnStats, btnBack;
     ActionListener upgrades = new Upgrades(), options = new Options(), stats = new Stats(), back = new Back();
 
     public PanMenu() {
         setLayout(new GridLayout(1, 4));
+        
+        btnUpgrades = new JButton("Upgrades");
+        btnOptions = new JButton("Options");
+        btnStats = new JButton("Stats");
+        btnBack = new JButton("Back");
 
         add(btnUpgrades);
         add(btnOptions);
@@ -31,6 +36,9 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
+            PanMain.panStats.setVisible(false);
+            PanMain.panUpgrades.setVisible(true);
+            FraMain.panMain.add(PanMain.panUpgrades, BorderLayout.CENTER);
         }
     }
 
@@ -58,6 +66,7 @@ public class PanMenu extends JPanel {
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(true);
             PanMain.panStats.setVisible(false);
+            PanMain.panUpgrades.setVisible(false);
         }
     }
 }

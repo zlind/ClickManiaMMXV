@@ -9,14 +9,14 @@ import javax.swing.Timer;
 
 public class PanStats extends JPanel {
     
-    public static JLabel lblClicks = new JLabel("Clicks: 0", JLabel.CENTER), 
-            lblTime = new JLabel("Total time played: 0s", JLabel.CENTER);
-    Timer tmrTime;
-    ActionListener time = new Time();
+    public static JLabel lblClicks, lblCash, lblUpgrade1;
     
     public PanStats() {
-        tmrTime = new Timer(1, time);
-        setLayout(new GridLayout(2, 1));
+        setLayout(new GridLayout(1, 3));
+        
+        lblClicks = new JLabel("Clicks: 0", JLabel.CENTER);
+        lblCash = new JLabel("Total Cash Earned: $0", JLabel.CENTER);
+        lblUpgrade1 = new JLabel("# of Upgrade 1: 0");
         
         add(lblClicks);
         add(lblTime);
