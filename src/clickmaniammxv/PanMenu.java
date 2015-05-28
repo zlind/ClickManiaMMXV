@@ -25,7 +25,7 @@ public class PanMenu extends JPanel {
         btnOptions.addActionListener(options);
         btnStats.addActionListener(stats);
         btnBack.addActionListener(back);
-       
+
 
     }
 
@@ -42,7 +42,9 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
-              PanMain.panOption.setVisible(true);
+            PanMain.panOption.setVisible(true);
+            PanOption.btnSoundOn.setVisible(true);
+            PanOption.btnSoundOff.setVisible(true);
             FraMain.panMain.add(PanMain.panOption, BorderLayout.CENTER);
         }
     }
@@ -62,6 +64,10 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(true);
+            PanMain.panOption.setVisible(false);
+            PanOption.btnSoundOn.setVisible(false);
+            PanOption.btnSoundOff.setVisible(false);
+
         }
     }
 }

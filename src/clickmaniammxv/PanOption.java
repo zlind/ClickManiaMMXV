@@ -7,12 +7,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class PanOption extends JPanel {
+public class PanOption extends JPanel { 
+     public static JButton btnSoundOn = new JButton("On"), btnSoundOff = new JButton("Off");
+         ActionListener on = new PanOption.On(), off = new PanOption.Off();
     public PanOption() {
         setLayout(new GridLayout(1, 10));
-        JButton btnSoundOn = new JButton("On"), btnSoundOff = new JButton("Off");
-         ActionListener on = new PanOption.On(), off = new PanOption.Off();
-        this.setBackground(Color.red);
+
         add(btnSoundOn);
         add(btnSoundOff);
             btnSoundOn.addActionListener(on);
