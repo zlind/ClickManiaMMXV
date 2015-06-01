@@ -10,7 +10,7 @@ public class PanClick extends JPanel {
 
     ActionListener click = new Click();
     JButton btnClick = new JButton("Click");
-    public static int cash, clicks;
+    public static int cash = 0, clicks;
 
     public PanClick() {
         setLayout(new GridLayout(1, 1));
@@ -25,6 +25,8 @@ public class PanClick extends JPanel {
         public void actionPerformed(ActionEvent event) {
             cash++;
             cash += PanUpgrade.Upgrade1;
+            cash += PanUpgrade.Upgrade2;
+            cash += PanUpgrade.Upgrade3;
             PanHud.lblCash.setText("$" + cash);
             clicks++;
             PanStats.lblClicks.setText("Clicks: " + clicks);

@@ -60,6 +60,7 @@ public class PanMenu extends JPanel {
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(true);
             PanMain.panStats.setVisible(false);
+            PanMain.panUpgrade.setVisible(false);
         }
     }
 }

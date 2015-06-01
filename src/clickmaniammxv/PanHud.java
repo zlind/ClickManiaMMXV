@@ -15,9 +15,8 @@ public class PanHud extends JPanel {
         add(lblPerSecond);
         add(lblPerClick);
 
-
         lblCash.setHorizontalAlignment(JLabel.LEFT);
-        lblPerSecond.setHorizontalAlignment(JLabel.RIGHT);
+        lblPerSecond.setHorizontalAlignment(JLabel.CENTER);
         lblPerClick.setHorizontalAlignment(JLabel.RIGHT);
     }
 }
