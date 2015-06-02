@@ -37,6 +37,7 @@ public class PanMenu extends JPanel {
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
             PanMain.panStats.setVisible(false);
+            PanMain.panOptions.setVisible(false);
             PanMain.panUpgrades.setVisible(true);
             FraMain.panMain.add(PanMain.panUpgrades, BorderLayout.CENTER);
         }
@@ -47,6 +48,10 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
+            PanMain.panStats.setVisible(false);
+            PanMain.panOptions.setVisible(true);
+            PanMain.panUpgrades.setVisible(false);
+            FraMain.panMain.add(PanMain.panOptions, BorderLayout.CENTER);
         }
     }
 
@@ -56,6 +61,8 @@ public class PanMenu extends JPanel {
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
             PanMain.panStats.setVisible(true);
+            PanMain.panOptions.setVisible(false);
+            PanMain.panUpgrades.setVisible(false);
             FraMain.panMain.add(PanMain.panStats, BorderLayout.CENTER);
         }
     }
@@ -67,6 +74,7 @@ public class PanMenu extends JPanel {
             PanMain.panClick.setVisible(true);
             PanMain.panStats.setVisible(false);
             PanMain.panUpgrades.setVisible(false);
+            PanMain.panOptions.setVisible(false);
         }
     }
 }
