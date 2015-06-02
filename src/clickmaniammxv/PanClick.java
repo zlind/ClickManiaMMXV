@@ -10,7 +10,7 @@ public class PanClick extends JPanel {
 
     ActionListener click = new Click();
     JButton btnClick = new JButton("Click");
-    public static int cash = 9999999, clicks;
+    public static int cash = 0, clicks;
 
     public PanClick() {
         setLayout(new GridLayout(1, 1));
