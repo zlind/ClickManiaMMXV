@@ -8,15 +8,23 @@ import javax.swing.JPanel;
 
 public class PanClick extends JPanel {
 
-    ActionListener click = new Click();
-    JButton btnClick = new JButton("Click");
-    public static int cash = 0, clicks;
+    JButton btnClick;
+    ActionListener click;
+    public static int cash, clicks;
 
     public PanClick() {
         setLayout(new GridLayout(1, 1));
-
-        add(btnClick);
+        
+        cash = 0;
+        clicks = 0;
+        
+        btnClick = new JButton("Click");
+        
+        click = new Click();
+     
         btnClick.addActionListener(click);
+        
+        add(btnClick);
     }
 
     class Click implements ActionListener {
@@ -24,10 +32,10 @@ public class PanClick extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             cash++;
-            cash += PanUpgrade.Upgrade1;
-            cash += PanUpgrade.Upgrade2;
-            cash += PanUpgrade.Upgrade3;
-            cash += PanUpgrade.Upgrade4;
+            cash += PanUpgrade.up1;
+            cash += PanUpgrade.up2;
+            cash += PanUpgrade.up3;
+            cash += PanUpgrade.up4;
             PanHud.lblCash.setText("$" + cash);
             clicks++;
             PanStats.lblClicks.setText("Clicks: " + clicks);

@@ -8,48 +8,58 @@ import javax.swing.JPanel;
 
 public class PanUpgrade extends JPanel {
 
-    ActionListener upgrade1 = new Upgrade1();
-    ActionListener upgrade2 = new Upgrade2();
-    ActionListener upgrade3 = new Upgrade3();
-    ActionListener upgrade4 = new Upgrade4();
-    public static JButton btnUpgrade1 = new JButton("+1/Click - $100");
-    public static JButton btnUpgrade2 = new JButton("+5/Click - $500");
-    public static JButton btnUpgrade3 = new JButton("+10/Click - $1000");
-    public static JButton btnUpgrade4 = new JButton("+50/Click - $5000");
-    public static int cash, clicks;
-    public static int Upgrade1 = 0, Upgrade2 = 0, Upgrade3 = 0, Upgrade4 = 0;
-    public static int Cost1 = 100, Cost2 = 500, Cost3 = 1000, Cost4 = 5000;
+    public static JButton btnUpgrade1, btnUpgrade2, btnUpgrade3, btnUpgrade4;
+    ActionListener upgrade1, upgrade2, upgrade3, upgrade4;
+    public static int up1, up2, up3, up4, cost1, cost2, cost3, cost4;
 
     public PanUpgrade() {
         setLayout(new GridLayout(2, 2));
+        
+        up1 = 0;
+        up2 = 0;
+        up3 = 0;
+        up4 = 0;
+        cost1 = 100;
+        cost2 = 500;
+        cost3 = 1000;
+        cost4 = 5000;
 
-        add(btnUpgrade1);
-        add(btnUpgrade2);
-        add(btnUpgrade3);
-        add(btnUpgrade4);
+        btnUpgrade1 = new JButton("+1/Click - $100");
+        btnUpgrade2 = new JButton("+5/Click - $500");
+        btnUpgrade3 = new JButton("+10/Click - $1000");
+        btnUpgrade4 = new JButton("+50/Click - $5000");
+
+        upgrade1 = new Upgrade1();
+        upgrade2 = new Upgrade2();
+        upgrade3 = new Upgrade3();
+        upgrade4 = new Upgrade4();
+
         btnUpgrade1.addActionListener(upgrade1);
         btnUpgrade2.addActionListener(upgrade2);
         btnUpgrade3.addActionListener(upgrade3);
         btnUpgrade4.addActionListener(upgrade4);
 
-
+        add(btnUpgrade1);
+        add(btnUpgrade2);
+        add(btnUpgrade3);
+        add(btnUpgrade4);
     }
 
     class Upgrade1 implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent event) {
-            if (PanClick.cash >= Cost1) {
-                PanClick.cash -= Cost1;
-                Upgrade1++;
-                Cost1 *= 1.5;
+            if (PanClick.cash >= cost1) {
+                PanClick.cash -= cost1;
+                up1++;
+                cost1 *= 1.5;
                 PanHud.lblCash.setText("$" + PanClick.cash);
-                PanHud.lblPerClick.setText("$" + (Upgrade1 + Upgrade2 + Upgrade3 + Upgrade4 + 1) + " / click");
-                btnUpgrade1.setText("+1/Click - $" + Cost1);
+                PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
+                btnUpgrade1.setText("+1/Click - $" + cost1);
 
             } else {
 
-                btnUpgrade1.setText("+1/Click - $" + Cost1 + " Insufficient Funds");
+                btnUpgrade1.setText("+1/Click - $" + cost1 + " Insufficient Funds");
             }
         }
     }
@@ -58,17 +68,17 @@ public class PanUpgrade extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent event) {
-            if (PanClick.cash >= Cost2) {
-                PanClick.cash -= Cost2;
-                Upgrade2 += 5;
-                Cost2 *= 1.2;
+            if (PanClick.cash >= cost2) {
+                PanClick.cash -= cost2;
+                up2 += 5;
+                cost2 *= 1.2;
                 PanHud.lblCash.setText("$" + PanClick.cash);
-                PanHud.lblPerClick.setText("$" + (Upgrade1 + Upgrade2 + Upgrade3 + Upgrade4 + 1) + " / click");
-                btnUpgrade2.setText("+5/Click - $" + Cost2);
+                PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
+                btnUpgrade2.setText("+5/Click - $" + cost2);
 
             } else {
 
-                btnUpgrade2.setText("+5/Click - $" + Cost2 + " Insufficient Funds");
+                btnUpgrade2.setText("+5/Click - $" + cost2 + " Insufficient Funds");
             }
         }
     }
@@ -77,17 +87,17 @@ public class PanUpgrade extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent event) {
-            if (PanClick.cash >= Cost3) {
-                PanClick.cash -= Cost3;
-                Upgrade3 += 10;
-                Cost3 *= 1.25;
+            if (PanClick.cash >= cost3) {
+                PanClick.cash -= cost3;
+                up3 += 10;
+                cost3 *= 1.25;
                 PanHud.lblCash.setText("$" + PanClick.cash);
-                PanHud.lblPerClick.setText("$" + (Upgrade1 + Upgrade2 + Upgrade3 + Upgrade4 + 1) + " / click");
-                btnUpgrade3.setText("+10/Click - $" + Cost3);
+                PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
+                btnUpgrade3.setText("+10/Click - $" + cost3);
 
             } else {
 
-                btnUpgrade3.setText("+10/Click - $" + Cost3 + " Insufficient Funds");
+                btnUpgrade3.setText("+10/Click - $" + cost3 + " Insufficient Funds");
             }
         }
     }
@@ -96,17 +106,17 @@ public class PanUpgrade extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent event) {
-            if (PanClick.cash >= Cost4) {
-                PanClick.cash -= Cost4;
-                Upgrade4 += 50;
-                Cost4 *= 1.75;
+            if (PanClick.cash >= cost4) {
+                PanClick.cash -= cost4;
+                up4 += 50;
+                cost4 *= 1.75;
                 PanHud.lblCash.setText("$" + PanClick.cash);
-                PanHud.lblPerClick.setText("$" + (Upgrade1 + Upgrade2 + Upgrade3 + Upgrade4 + 1) + " / click");
-                btnUpgrade4.setText("+50/Click - $" + Cost4);
+                PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
+                btnUpgrade4.setText("+50/Click - $" + cost4);
 
             } else {
 
-                btnUpgrade4.setText("+50/Click - $" + Cost4 + " Insufficient Funds");
+                btnUpgrade4.setText("+50/Click - $" + cost4 + " Insufficient Funds");
             }
         }
     }

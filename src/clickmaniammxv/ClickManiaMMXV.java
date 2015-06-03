@@ -1,8 +1,10 @@
 package clickmaniammxv;
 
 public class ClickManiaMMXV {
+    
+    public static FraMain fraMain;
 
     public static void main(String[] args) {
-        FraMain fraMain = new FraMain();
+        fraMain = new FraMain();
     }
 }
