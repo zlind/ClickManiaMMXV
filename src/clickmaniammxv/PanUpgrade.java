@@ -14,7 +14,7 @@ public class PanUpgrade extends JPanel {
 
     public PanUpgrade() {
         setLayout(new GridLayout(2, 2));
-        
+
         up1 = 0;
         up2 = 0;
         up3 = 0;

@@ -14,12 +14,12 @@ public class PanMenu extends JPanel {
 
     public PanMenu() {
         setLayout(new GridLayout(1, 4));
-        
+
         btnUpgrades = new JButton("Upgrades");
         btnOptions = new JButton("Options");
         btnStats = new JButton("Stats");
-        btnBack = new JButton("Back"); 
-        
+        btnBack = new JButton("Back");
+
         upgrades = new Upgrades();
         options = new Options();
         stats = new Stats();
@@ -29,7 +29,7 @@ public class PanMenu extends JPanel {
         btnOptions.addActionListener(options);
         btnStats.addActionListener(stats);
         btnBack.addActionListener(back);
-        
+
         add(btnUpgrades);
         add(btnOptions);
         add(btnStats);
@@ -41,9 +41,10 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
-            PanMain.panStats.setVisible(false);
-            //PanMain.panOptions.setVisible(false);
             PanMain.panUpgrade.setVisible(true);
+            PanMain.panStat.setVisible(false);
+            PanMain.panOption.setVisible(false);
+
             FraMain.panMain.add(PanMain.panUpgrade, BorderLayout.CENTER);
         }
     }
@@ -53,10 +54,11 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
-            PanMain.panStats.setVisible(false);
-            //PanMain.panOptions.setVisible(true);
             PanMain.panUpgrade.setVisible(false);
-            //FraMain.panMain.add(PanMain.panOptions, BorderLayout.CENTER);
+            PanMain.panStat.setVisible(false);
+            PanMain.panOption.setVisible(true);
+
+            FraMain.panMain.add(PanMain.panOption, BorderLayout.CENTER);
         }
     }
 
@@ -65,10 +67,11 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(false);
-            PanMain.panStats.setVisible(true);
-            //PanMain.panOptions.setVisible(false);
             PanMain.panUpgrade.setVisible(false);
-            FraMain.panMain.add(PanMain.panStats, BorderLayout.CENTER);
+            PanMain.panStat.setVisible(true);
+            PanMain.panOption.setVisible(false);
+
+            FraMain.panMain.add(PanMain.panStat, BorderLayout.CENTER);
         }
     }
 
@@ -77,9 +80,9 @@ public class PanMenu extends JPanel {
         @Override
         public void actionPerformed(ActionEvent event) {
             PanMain.panClick.setVisible(true);
-            PanMain.panStats.setVisible(false);
             PanMain.panUpgrade.setVisible(false);
-            //PanMain.panOptions.setVisible(false);
+            PanMain.panStat.setVisible(false);
+            PanMain.panOption.setVisible(false);
         }
     }
 }

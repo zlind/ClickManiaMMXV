@@ -38,7 +38,7 @@ public class PanClick extends JPanel {
             cash += PanUpgrade.up4;
             PanHud.lblCash.setText("$" + cash);
             clicks++;
-            PanStats.lblClicks.setText("Clicks: " + clicks);
+            PanStat.lblClicks.setText("Clicks: " + clicks);
 
         }
     }

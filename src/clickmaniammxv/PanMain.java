@@ -8,8 +8,9 @@ public class PanMain extends JPanel {
     public static PanMenu panMenu;
     public static PanClick panClick;
     public static PanHud panHud;
-    public static PanStats panStats;
+    public static PanStat panStat;
     public static PanUpgrade panUpgrade;
+    public static PanOption panOption;
 
     public PanMain() {
         setLayout(new BorderLayout());
@@ -17,8 +18,9 @@ public class PanMain extends JPanel {
         panMenu = new PanMenu();
         panClick = new PanClick();
         panHud = new PanHud();
-        panStats = new PanStats();
+        panStat = new PanStat();
         panUpgrade = new PanUpgrade();
+        panOption = new PanOption();
 
         add(panClick, BorderLayout.CENTER);
         add(panHud, BorderLayout.NORTH);
