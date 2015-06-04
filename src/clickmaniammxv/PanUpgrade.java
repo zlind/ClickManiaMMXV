@@ -56,9 +56,7 @@ public class PanUpgrade extends JPanel {
                 PanHud.lblCash.setText("$" + PanClick.cash);
                 PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
                 btnUpgrade1.setText("+1/Click - $" + cost1);
-
             } else {
-
                 btnUpgrade1.setText("+1/Click - $" + cost1 + " Insufficient Funds");
             }
         }
@@ -75,9 +73,7 @@ public class PanUpgrade extends JPanel {
                 PanHud.lblCash.setText("$" + PanClick.cash);
                 PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
                 btnUpgrade2.setText("+5/Click - $" + cost2);
-
             } else {
-
                 btnUpgrade2.setText("+5/Click - $" + cost2 + " Insufficient Funds");
             }
         }
@@ -94,9 +90,7 @@ public class PanUpgrade extends JPanel {
                 PanHud.lblCash.setText("$" + PanClick.cash);
                 PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
                 btnUpgrade3.setText("+10/Click - $" + cost3);
-
             } else {
-
                 btnUpgrade3.setText("+10/Click - $" + cost3 + " Insufficient Funds");
             }
         }
@@ -113,9 +107,7 @@ public class PanUpgrade extends JPanel {
                 PanHud.lblCash.setText("$" + PanClick.cash);
                 PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
                 btnUpgrade4.setText("+50/Click - $" + cost4);
-
             } else {
-
                 btnUpgrade4.setText("+50/Click - $" + cost4 + " Insufficient Funds");
             }
         }
