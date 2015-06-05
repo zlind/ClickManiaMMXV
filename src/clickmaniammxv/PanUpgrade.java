@@ -24,10 +24,10 @@ public class PanUpgrade extends JPanel {
         cost3 = 1000;
         cost4 = 5000;
 
-        btnUpgrade1 = new JButton("+1/Click - $100");
-        btnUpgrade2 = new JButton("+5/Click - $500");
-        btnUpgrade3 = new JButton("+10/Click - $1000");
-        btnUpgrade4 = new JButton("+50/Click - $5000");
+        btnUpgrade1 = new JButton("Secretly fund Al-Queda - " + "+1/Click - $" + cost1);
+        btnUpgrade2 = new JButton("Hire demolition team/ middle eastern looking agents - " + "+5/Click - $" + cost2);
+        btnUpgrade3 = new JButton("Rig the WTC's with thermite/ Insert 'Terrorists' - " + "+10/Click - $1000");
+        btnUpgrade4 = new JButton("Fund Fox News Coverage - " + "+50/Click - $5000");
 
         upgrade1 = new Upgrade1();
         upgrade2 = new Upgrade2();
@@ -55,9 +55,9 @@ public class PanUpgrade extends JPanel {
                 cost1 *= 1.5;
                 PanHud.lblCash.setText("$" + PanClick.cash);
                 PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
-                btnUpgrade1.setText("+1/Click - $" + cost1);
+                btnUpgrade1.setText("Secretly fund Al-Queda - " + "+1/Click - $" + cost1);
             } else {
-                btnUpgrade1.setText("+1/Click - $" + cost1 + " Insufficient Funds");
+                btnUpgrade1.setText("Secretly fund Al-Queda - " + "+1/Click - $" + cost1 + " Insufficient Funds");
             }
         }
     }
@@ -72,9 +72,9 @@ public class PanUpgrade extends JPanel {
                 cost2 *= 1.2;
                 PanHud.lblCash.setText("$" + PanClick.cash);
                 PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
-                btnUpgrade2.setText("+5/Click - $" + cost2);
+                btnUpgrade2.setText("Hire demolition team/ middle eastern looking agents - " + "+5/Click - $" + cost2);
             } else {
-                btnUpgrade2.setText("+5/Click - $" + cost2 + " Insufficient Funds");
+                btnUpgrade2.setText("Hire demolition team/ middle eastern looking agents - " + "+5/Click - $" + cost2 + " Insufficient Funds");
             }
         }
     }
@@ -89,9 +89,9 @@ public class PanUpgrade extends JPanel {
                 cost3 *= 1.25;
                 PanHud.lblCash.setText("$" + PanClick.cash);
                 PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
-                btnUpgrade3.setText("+10/Click - $" + cost3);
+                btnUpgrade3.setText("Rig the WTC's with thermite/ Insert 'Terrorists' - " + "+10/Click - $" + cost3);
             } else {
-                btnUpgrade3.setText("+10/Click - $" + cost3 + " Insufficient Funds");
+                btnUpgrade3.setText("Rig the WTC's with thermite/ Insert 'Terrorists' - " + "+10/Click - $" + cost3 + " Insufficient Funds");
             }
         }
     }
@@ -106,9 +106,9 @@ public class PanUpgrade extends JPanel {
                 cost4 *= 1.75;
                 PanHud.lblCash.setText("$" + PanClick.cash);
                 PanHud.lblPerClick.setText("$" + (up1 + up2 + up3 + up4 + 1) + " / click");
-                btnUpgrade4.setText("+50/Click - $" + cost4);
+                btnUpgrade4.setText("Fund Fox News Coverage - " + "+50/Click - $" + cost4);
             } else {
-                btnUpgrade4.setText("+50/Click - $" + cost4 + " Insufficient Funds");
+                btnUpgrade4.setText("Fund Fox News Coverage - " + "+50/Click - $" + cost4 + " Insufficient Funds");
             }
         }
     }
